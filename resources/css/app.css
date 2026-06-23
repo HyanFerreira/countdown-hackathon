@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@import '../../vendor/tallstackui/tallstackui/css/v4.css';
+
+@theme {
+    --color-primary-50: #ecfffc;
+    --color-primary-100: #cffbf5;
+    --color-primary-200: #a5f5eb;
+    --color-primary-300: #6beadc;
+    --color-primary-400: #2ec4b6;
+    --color-primary-500: #2ec4b6;
+    --color-primary-600: #169d93;
+    --color-primary-700: #137d77;
+    --color-primary-800: #12635f;
+    --color-primary-900: #073b4c;
+    --color-primary-950: #101820;
+    --color-dark-50: #f8fafc;
+    --color-dark-100: #e2e8f0;
+    --color-dark-200: #cbd5e1;
+    --color-dark-300: #a8b6c8;
+    --color-dark-400: #8a9bb0;
+    --color-dark-500: #46576b;
+    --color-dark-600: #263646;
+    --color-dark-700: #172632;
+    --color-dark-800: #101820;
+    --color-dark-900: #0b121a;
+    --color-dark-950: #05090d;
+}
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@source '../../vendor/tallstackui/tallstackui/**/*.php';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/laravel/jetstream/**/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer components {
+    [data-floating] {
+        background-color: #0f2230 !important;
+        border-color: rgb(255 255 255 / 0.12) !important;
+        color: #f8fafc !important;
+        box-shadow: 0 24px 70px rgb(0 0 0 / 0.42) !important;
+        z-index: 70 !important;
+    }
+
+    [data-floating] input,
+    [data-floating] button,
+    [data-floating] li,
+    [data-floating] span {
+        color: #f8fafc;
+    }
+
+    [data-floating] input {
+        background-color: #101820 !important;
+        border-color: rgb(255 255 255 / 0.12) !important;
+        color: #f8fafc !important;
+    }
+
+    [data-floating] input::placeholder {
+        color: #8a9bb0 !important;
+    }
+
+    [data-floating] svg {
+        color: #a8b6c8 !important;
+    }
+
+    [data-floating] li:hover,
+    [data-floating] li:focus {
+        background-color: rgb(46 196 182 / 0.16) !important;
+    }
+
+    [data-floating] li.font-semibold,
+    [data-floating] li[aria-selected="true"] {
+        background-color: rgb(46 196 182 / 0.16) !important;
+        color: #2ec4b6 !important;
+    }
+
+    [data-floating]:has([dusk="tallstackui_select_options"]) {
+        min-width: auto !important;
+        max-width: calc(100vw - 2rem) !important;
+        overflow: hidden !important;
+    }
+
+    [data-floating]:has([dusk="tallstackui_select_options"]) [dusk="tallstackui_select_options"] {
+        background-color: #0f2230 !important;
+        overflow-x: hidden !important;
+    }
+
+    [data-floating]:has([dusk="tallstackui_date_input"]),
+    [data-floating]:has([dusk="tallstackui_select_options"]) {
+        border-radius: 0.5rem !important;
+    }
+
+    [data-floating]:has(input[x-ref="search"]) {
+        max-width: calc(100vw - 2rem) !important;
+    }
+
+    .dark [dusk="tallstackui_date_input"],
+    .dark [dusk="tallstackui_select_open_close"],
+    .dark input {
+        background-color: #172632 !important;
+        border-color: rgb(255 255 255 / 0.12) !important;
+        color: #f8fafc !important;
+    }
+
+    .dark input::placeholder {
+        color: #8a9bb0 !important;
+    }
+
+    .dark [dusk="tallstackui_date_input"]:focus,
+    .dark [dusk="tallstackui_select_open_close"]:focus,
+    .dark input:focus {
+        --tw-ring-color: #2ec4b6 !important;
+        border-color: #2ec4b6 !important;
+    }
+
+    .dark [dusk="tallstackui_select_open_close"] {
+        box-shadow: 0 0 0 1px rgb(255 255 255 / 0.12);
+    }
+
+    .dark [dusk="tallstackui_select_open_close"] span {
+        color: #f8fafc !important;
+        font-weight: 400 !important;
+    }
+
+    .dark [dusk="tallstackui_select_open_close"] svg {
+        color: #a8b6c8 !important;
+    }
+
+    .dark [dusk="tallstackui_select_open_close"]:focus {
+        box-shadow: 0 0 0 2px #2ec4b6;
+    }
+
+    .admin-panel.admin-light {
+        background-color: #f4f7fb !important;
+        color: #172331 !important;
+    }
+
+    .admin-panel.admin-light header,
+    .admin-panel.admin-light form,
+    .admin-panel.admin-light aside > div,
+    .admin-panel.admin-light section > div,
+    .admin-panel.admin-light [role="dialog"],
+    .admin-panel.admin-light [role="menu"] {
+        background-color: #ffffff !important;
+        border-color: #d7e2ec !important;
+        box-shadow: 0 16px 40px rgb(15 34 48 / 0.10) !important;
+    }
+
+    .admin-panel.admin-light h1,
+    .admin-panel.admin-light h2,
+    .admin-panel.admin-light .text-white,
+    .admin-panel.admin-light .text-slate-100 {
+        color: #10202c !important;
+    }
+
+    .admin-panel.admin-light .text-slate-300,
+    .admin-panel.admin-light .text-slate-400 {
+        color: #607287 !important;
+    }
+
+    .admin-panel.admin-light .border-white\/10,
+    .admin-panel.admin-light .border-white\/15,
+    .admin-panel.admin-light .border-white\/25 {
+        border-color: #d7e2ec !important;
+    }
+
+    .admin-panel.admin-light .bg-white\/10,
+    .admin-panel.admin-light .bg-white\/\[0\.06\] {
+        background-color: #ffffff !important;
+    }
+
+    .admin-panel.admin-light .hover\:bg-white\/10:hover {
+        background-color: #edf4f8 !important;
+    }
+
+    .admin-panel.admin-light [dusk="tallstackui_date_input"],
+    .admin-panel.admin-light [dusk="tallstackui_select_open_close"],
+    .admin-panel.admin-light input {
+        background-color: #f8fbfd !important;
+        border-color: #c9d8e4 !important;
+        color: #10202c !important;
+    }
+
+    .admin-panel.admin-light input::placeholder {
+        color: #7a8da0 !important;
+    }
+
+    .admin-panel.admin-light [dusk="tallstackui_select_open_close"] span {
+        color: #10202c !important;
+    }
+
+    .admin-panel.admin-light [dusk="tallstackui_select_open_close"] svg,
+    .admin-panel.admin-light [dusk="tallstackui_date_input"] svg,
+    .admin-panel.admin-light input + svg {
+        color: #607287 !important;
+    }
+
+    .admin-panel.admin-light .focus\:ring-offset-\[\#101820\]:focus,
+    .admin-panel.admin-light .focus\:ring-offset-\[\#0f2230\]:focus {
+        --tw-ring-offset-color: #ffffff !important;
+    }
+
+    body.admin-light-theme [data-floating] {
+        background-color: #ffffff !important;
+        border-color: #d7e2ec !important;
+        color: #10202c !important;
+        box-shadow: 0 24px 70px rgb(15 34 48 / 0.18) !important;
+    }
+
+    body.admin-light-theme [data-floating] input {
+        background-color: #f8fbfd !important;
+        border-color: #c9d8e4 !important;
+        color: #10202c !important;
+    }
+
+    body.admin-light-theme [data-floating] input::placeholder {
+        color: #7a8da0 !important;
+    }
+
+    body.admin-light-theme [data-floating] button,
+    body.admin-light-theme [data-floating] li,
+    body.admin-light-theme [data-floating] span {
+        color: #10202c;
+    }
+
+    body.admin-light-theme [data-floating] svg {
+        color: #607287 !important;
+    }
+
+    body.admin-light-theme [data-floating] li:hover,
+    body.admin-light-theme [data-floating] li:focus,
+    body.admin-light-theme [data-floating] li.font-semibold,
+    body.admin-light-theme [data-floating] li[aria-selected="true"] {
+        background-color: rgb(46 196 182 / 0.16) !important;
+    }
+
+    body.admin-light-theme [data-floating] li.font-semibold,
+    body.admin-light-theme [data-floating] li[aria-selected="true"] {
+        color: #137d77 !important;
+    }
+
+    body.admin-light-theme [data-floating]:has([dusk="tallstackui_select_options"]) [dusk="tallstackui_select_options"] {
+        background-color: #ffffff !important;
+    }
+}
