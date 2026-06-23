@@ -1,24 +1,70 @@
 <div class="dark min-h-screen bg-[#101820] text-[#F8FAFC]">
     @guest
-        <div class="flex min-h-screen items-center justify-center bg-[#101820] px-4">
-            <div class="w-full max-w-sm rounded-lg border border-white/10 bg-[#0f2230] p-6 shadow-2xl shadow-black/40">
-                <p class="text-sm font-bold uppercase text-[#2EC4B6]">Admin</p>
-                <h1 class="mt-2 text-3xl font-black text-white">Contador Hackathon 2026</h1>
-                <p class="mt-2 text-sm text-slate-300">Entre para configurar o contador oficial.</p>
+        <div class="min-h-screen overflow-hidden bg-[#101820]">
+            <div class="mx-auto flex min-h-screen w-full max-w-6xl items-center px-4 py-8 sm:px-6 lg:px-8">
+                <div class="grid w-full overflow-hidden rounded-lg border border-white/10 bg-[#0f2230] shadow-2xl shadow-black/40 lg:grid-cols-[1.05fr_0.95fr]">
+                    <section class="relative order-last flex min-h-[420px] flex-col justify-between border-t border-white/10 bg-[#0b1620] p-6 sm:p-8 lg:order-none lg:border-r lg:border-t-0 lg:p-10">
+                        <div class="absolute inset-x-0 top-0 h-1 bg-[#2EC4B6]" aria-hidden="true"></div>
 
-                <form wire:submit="login" class="mt-8 space-y-5">
-                    <div>
-                        <x-ts-input id="email" label="E-mail" type="email" wire:model="email" icon="envelope" placeholder="user@mail.com" autocomplete="off" />
-                    </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 rounded-md border border-[#2EC4B6]/30 bg-[#2EC4B6]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#2EC4B6]">
+                                <span class="size-2 rounded-full bg-[#2EC4B6]"></span>
+                                Admin
+                            </div>
 
-                    <div>
-                        <x-ts-password id="password" label="Senha" wire:model="password" icon="lock-closed" placeholder="Digite sua senha" autocomplete="off" />
-                    </div>
+                            <h1 class="mt-6 max-w-xl text-4xl font-black leading-tight text-white sm:text-5xl">
+                                Contador Hackathon 2026
+                            </h1>
 
-                    <x-ts-checkbox id="remember_email" label="Lembrar e-mail" wire:model="remember_email" />
+                            <p class="mt-4 max-w-lg text-base leading-7 text-slate-300">
+                                Acesse o painel para ajustar datas, textos e sincronizar a exibição oficial do evento.
+                            </p>
+                        </div>
 
-                    <x-ts-button type="submit" text="Entrar no painel" color="primary" class="w-full cursor-pointer justify-center font-semibold" />
-                </form>
+                        <div class="mt-10 grid gap-3 sm:grid-cols-3">
+                            <div class="rounded-md border border-white/10 bg-white/[0.06] p-4">
+                                <p class="text-xs font-semibold uppercase text-slate-400">Início</p>
+                                <p class="mt-2 text-lg font-black text-white">18:00</p>
+                            </div>
+
+                            <div class="rounded-md border border-white/10 bg-white/[0.06] p-4">
+                                <p class="text-xs font-semibold uppercase text-slate-400">Status</p>
+                                <p class="mt-2 text-lg font-black text-[#2EC4B6]">Pronto</p>
+                            </div>
+
+                            <div class="rounded-md border border-white/10 bg-white/[0.06] p-4">
+                                <p class="text-xs font-semibold uppercase text-slate-400">Sync</p>
+                                <p class="mt-2 text-lg font-black text-[#FFB703]">Servidor</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="order-first flex items-center justify-center bg-[#10202c] p-6 sm:p-8 lg:order-none lg:p-10">
+                        <div class="w-full max-w-md">
+                            <div class="mb-8">
+                                <p class="text-sm font-bold uppercase text-[#2EC4B6]">Acesso restrito</p>
+                                <h2 class="mt-2 text-3xl font-black text-white">Entrar no painel</h2>
+                                <p class="mt-2 text-sm leading-6 text-slate-300">Contador Hackathon 2026. Use as credenciais administrativas para continuar.</p>
+                            </div>
+
+                            <form wire:submit="login" class="space-y-6">
+                                <div>
+                                    <x-ts-input id="email" label="E-mail" type="email" wire:model="email" icon="envelope" placeholder="admin@contador.com" autocomplete="off" />
+                                </div>
+
+                                <div>
+                                    <x-ts-password id="password" label="Senha" wire:model="password" icon="lock-closed" placeholder="Digite sua senha" autocomplete="off" />
+                                </div>
+
+                                <div class="flex items-center justify-between gap-4">
+                                    <x-ts-checkbox id="remember_email" label="Lembrar e-mail" wire:model="remember_email" />
+                                </div>
+
+                                <x-ts-button type="submit" text="Entrar no painel" color="primary" class="min-h-12 w-full cursor-pointer justify-center text-base font-bold" />
+                            </form>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     @else

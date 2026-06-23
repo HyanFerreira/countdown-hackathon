@@ -114,6 +114,24 @@
         color: #8a9bb0 !important;
     }
 
+    .dark input:-webkit-autofill,
+    .dark input:-webkit-autofill:hover,
+    .dark input:-webkit-autofill:focus,
+    .dark input:-webkit-autofill:active {
+        -webkit-text-fill-color: #f8fafc !important;
+        caret-color: #f8fafc !important;
+        background-color: #172632 !important;
+        background-image: none !important;
+        border-color: transparent !important;
+        -webkit-box-shadow:
+            inset 0 0 0 1000px #172632,
+            inset 0 0 0 1px rgb(255 255 255 / 0.12) !important;
+        box-shadow:
+            inset 0 0 0 1000px #172632,
+            inset 0 0 0 1px rgb(255 255 255 / 0.12) !important;
+        transition: background-color 9999s ease-out 0s;
+    }
+
     .dark [dusk="tallstackui_date_input"]:focus,
     .dark [dusk="tallstackui_select_open_close"]:focus,
     .dark input:focus {
@@ -191,6 +209,24 @@
 
     .admin-panel.admin-light input::placeholder {
         color: #7a8da0 !important;
+    }
+
+    .admin-panel.admin-light input:-webkit-autofill,
+    .admin-panel.admin-light input:-webkit-autofill:hover,
+    .admin-panel.admin-light input:-webkit-autofill:focus,
+    .admin-panel.admin-light input:-webkit-autofill:active {
+        -webkit-text-fill-color: #10202c !important;
+        caret-color: #10202c !important;
+        background-color: #f8fbfd !important;
+        background-image: none !important;
+        border-color: transparent !important;
+        -webkit-box-shadow:
+            inset 0 0 0 1000px #f8fbfd,
+            inset 0 0 0 1px #c9d8e4 !important;
+        box-shadow:
+            inset 0 0 0 1000px #f8fbfd,
+            inset 0 0 0 1px #c9d8e4 !important;
+        transition: background-color 9999s ease-out 0s;
     }
 
     .admin-panel.admin-light [dusk="tallstackui_select_open_close"] span {
