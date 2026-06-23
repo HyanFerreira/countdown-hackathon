@@ -12,8 +12,8 @@
                                 Admin
                             </div>
 
-                            <h1 class="mt-6 max-w-xl text-4xl font-black leading-tight text-white sm:text-5xl">
-                                Contador Hackathon 2026
+                            <h1 class="mt-6 max-w-xl text-3xl font-black leading-tight text-white">
+                                Contador Oficial - Hackathon 2026
                             </h1>
 
                             <p class="mt-4 max-w-lg text-base leading-7 text-slate-300">
@@ -21,30 +21,59 @@
                             </p>
                         </div>
 
-                        <div class="mt-10 grid gap-3 sm:grid-cols-3">
-                            <div class="rounded-md border border-white/10 bg-white/[0.06] p-4">
-                                <p class="text-xs font-semibold uppercase text-slate-400">Início</p>
-                                <p class="mt-2 text-lg font-black text-white">18:00</p>
+                        <div class="mt-10 grid gap-3 sm:grid-cols-2">
+                            <div class="flex items-center gap-4 rounded-lg border border-[#2EC4B6]/35 bg-[#071b2b]/70 p-4 shadow-sm shadow-[#2EC4B6]/10">
+                                <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#2EC4B6]/15 text-[#2EC4B6]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M8 2v4" />
+                                        <path d="M16 2v4" />
+                                        <rect width="18" height="18" x="3" y="4" rx="2" />
+                                        <path d="M3 10h18" />
+                                        <path d="M8 14h.01" />
+                                        <path d="M12 14h.01" />
+                                        <path d="M16 14h.01" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h2 class="text-base font-black text-white">Datas</h2>
+                                    <p class="mt-1 text-sm leading-5 text-slate-300">Defina início e fim.</p>
+                                </div>
                             </div>
 
-                            <div class="rounded-md border border-white/10 bg-white/[0.06] p-4">
-                                <p class="text-xs font-semibold uppercase text-slate-400">Status</p>
-                                <p class="mt-2 text-lg font-black text-[#2EC4B6]">Pronto</p>
+                            <div class="flex items-center gap-4 rounded-lg border border-[#2EC4B6]/35 bg-[#071b2b]/70 p-4 shadow-sm shadow-[#2EC4B6]/10">
+                                <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#2EC4B6]/15 text-[#2EC4B6]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M12 20h9" />
+                                        <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h2 class="text-base font-black text-white">Textos</h2>
+                                    <p class="mt-1 text-sm leading-5 text-slate-300">Edite mensagens.</p>
+                                </div>
                             </div>
 
-                            <div class="rounded-md border border-white/10 bg-white/[0.06] p-4">
-                                <p class="text-xs font-semibold uppercase text-slate-400">Sync</p>
-                                <p class="mt-2 text-lg font-black text-[#FFB703]">Servidor</p>
+                            <div class="flex items-center gap-4 rounded-lg border border-[#2EC4B6]/35 bg-[#071b2b]/70 p-4 shadow-sm shadow-[#2EC4B6]/10 sm:col-span-2">
+                                <span class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#2EC4B6]/15 text-[#2EC4B6]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M3 12a9 9 0 0 1 15.6-6.1" />
+                                        <path d="M18 2v4h-4" />
+                                        <path d="M21 12a9 9 0 0 1-15.6 6.1" />
+                                        <path d="M6 22v-4h4" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h2 class="text-base font-black text-white">Sincronização em tempo real</h2>
+                                    <p class="mt-1 text-sm leading-5 text-slate-300">Atualize sem recarregar.</p>
+                                </div>
                             </div>
                         </div>
                     </section>
 
                     <section class="order-first flex items-center justify-center bg-[#10202c] p-6 sm:p-8 lg:order-none lg:p-10">
                         <div class="w-full max-w-md">
-                            <div class="mb-8">
-                                <p class="text-sm font-bold uppercase text-[#2EC4B6]">Acesso restrito</p>
-                                <h2 class="mt-2 text-3xl font-black text-white">Entrar no painel</h2>
-                                <p class="mt-2 text-sm leading-6 text-slate-300">Contador Hackathon 2026. Use as credenciais administrativas para continuar.</p>
+                            <div class="mb-8 text-center">
+                                <h2 class="text-3xl font-black text-white">Entrar no painel</h2>
                             </div>
 
                             <form wire:submit="login" class="space-y-6">
@@ -73,6 +102,7 @@
                 modal: null,
                 menuOpen: false,
                 settingsOpen: false,
+                themeSwitching: false,
                 darkTheme: true,
                 init() {
                     this.darkTheme = localStorage.getItem('admin-theme') !== 'light';
@@ -81,6 +111,17 @@
                 syncTheme() {
                     localStorage.setItem('admin-theme', this.darkTheme ? 'dark' : 'light');
                     document.body.classList.toggle('admin-light-theme', !this.darkTheme);
+                },
+                toggleTheme() {
+                    this.themeSwitching = true;
+                    this.darkTheme = !this.darkTheme;
+                    this.syncTheme();
+
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            this.themeSwitching = false;
+                        });
+                    });
                 },
                 open(action, title, description, confirmText) {
                     this.modal = { action, title, description, confirmText };
@@ -120,7 +161,7 @@
             }"
             x-on:keydown.escape.window="closeAll()"
             class="admin-panel min-h-screen"
-            x-bind:class="darkTheme ? 'dark admin-dark' : 'admin-light'"
+            x-bind:class="[darkTheme ? 'dark admin-dark' : 'admin-light', themeSwitching ? 'admin-theme-switching' : '']"
         >
             <header class="border-b border-white/10 bg-[#0f2230]">
                 <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
@@ -170,7 +211,7 @@
 
                             <button
                                 type="button"
-                                x-on:click="darkTheme = !darkTheme; syncTheme()"
+                                x-on:click="toggleTheme()"
                                 class="flex w-full cursor-pointer items-center justify-between gap-3 rounded-md px-3 py-2 text-left text-sm font-semibold text-slate-100 transition hover:bg-white/10"
                                 role="menuitem"
                             >
@@ -178,7 +219,7 @@
                                     <svg x-show="darkTheme" xmlns="http://www.w3.org/2000/svg" class="size-4 text-[#2ec4b6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                         <path d="M12 3a6 6 0 0 0 9 7 9 9 0 1 1-9-7Z" />
                                     </svg>
-                                    <svg x-cloak x-show="!darkTheme" xmlns="http://www.w3.org/2000/svg" class="size-4 text-[#f4e3c1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <svg x-cloak x-show="!darkTheme" xmlns="http://www.w3.org/2000/svg" class="admin-theme-sun size-4 text-[#f59e0b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                         <circle cx="12" cy="12" r="4" />
                                         <path d="M12 2v2" />
                                         <path d="M12 20v2" />
@@ -191,7 +232,7 @@
                                     </svg>
                                     Tema
                                 </span>
-                                <span class="flex h-6 w-11 items-center rounded-full border border-white/10 bg-white/10 p-0.5 transition">
+                                <span class="admin-theme-switch flex h-6 w-11 items-center rounded-full border border-white/10 bg-white/10 p-0.5 transition">
                                     <span class="size-5 rounded-full bg-[#2ec4b6] transition" x-bind:class="{ 'translate-x-5': !darkTheme }"></span>
                                 </span>
                             </button>
@@ -199,10 +240,10 @@
                             <button
                                 type="button"
                                 x-on:click="open('logout', 'Sair do painel?', 'Sua sessão administrativa será encerrada.', 'Sair'); menuOpen = false"
-                                class="mt-1 flex w-full cursor-pointer items-center gap-3 rounded-md border border-red-400/20 bg-red-500/10 px-3 py-2 text-left text-sm font-semibold text-red-200 transition hover:border-red-400/30 hover:bg-red-500/15 hover:text-red-100"
+                                class="admin-logout-button mt-1 flex w-full cursor-pointer items-center gap-3 rounded-md border border-red-400/20 bg-red-500/10 px-3 py-2 text-left text-sm font-semibold text-red-200 transition hover:border-red-400/30 hover:bg-red-500/15 hover:text-red-100"
                                 role="menuitem"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="size-4 text-red-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="admin-logout-icon size-4 text-red-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="m16 17 5-5-5-5" />
                                     <path d="M21 12H9" />
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
@@ -307,7 +348,7 @@
                 </section>
 
                 <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
-                    <form class="rounded-lg border border-white/10 bg-white/[0.06] p-6 shadow-sm shadow-black/20">
+                    <form class="flex h-full flex-col rounded-lg border border-white/10 bg-white/[0.06] p-6 shadow-sm shadow-black/20">
                         <h2 class="text-xl font-black text-white">Textos do contador</h2>
 
                         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -324,7 +365,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-20 flex flex-col gap-3 sm:flex-row sm:justify-end">
+                        <div class="mt-auto flex flex-col gap-3 pt-20 sm:flex-row sm:justify-end">
                             <button
                                 type="button"
                                 x-on:click="open('restoreDefaults', 'Restaurar padrões?', 'As datas e textos atuais serão substituídos pelos valores oficiais do Hackathon 2026.', 'Restaurar')"

@@ -157,37 +157,71 @@
     }
 
     .admin-panel.admin-light {
-        background-color: #f4f7fb !important;
-        color: #172331 !important;
+        background-color: #f5f6f8 !important;
+        color: #171b22 !important;
     }
 
-    .admin-panel.admin-light header,
+    .admin-panel {
+        transition:
+            background-color 140ms ease,
+            color 140ms ease;
+    }
+
+    .admin-panel header,
+    .admin-panel form,
+    .admin-panel aside > div,
+    .admin-panel section > div,
+    .admin-panel [role="dialog"],
+    .admin-panel [role="menu"] {
+        transition:
+            background-color 140ms ease,
+            border-color 140ms ease,
+            box-shadow 140ms ease,
+            color 140ms ease;
+    }
+
+    .admin-panel.admin-theme-switching,
+    .admin-panel.admin-theme-switching * {
+        transition-duration: 0ms !important;
+        transition-delay: 0ms !important;
+    }
+
+    .admin-panel.admin-light header {
+        background-color: #ffffff !important;
+        border-color: #e5e7eb !important;
+        box-shadow: none !important;
+    }
+
     .admin-panel.admin-light form,
     .admin-panel.admin-light aside > div,
     .admin-panel.admin-light section > div,
     .admin-panel.admin-light [role="dialog"],
     .admin-panel.admin-light [role="menu"] {
         background-color: #ffffff !important;
-        border-color: #d7e2ec !important;
-        box-shadow: 0 16px 40px rgb(15 34 48 / 0.10) !important;
+        border-color: #dfe3e8 !important;
+        box-shadow: 0 14px 34px rgb(17 24 39 / 0.06) !important;
+    }
+
+    .admin-panel.admin-light [role="menu"] {
+        box-shadow: 0 18px 44px rgb(17 24 39 / 0.12) !important;
     }
 
     .admin-panel.admin-light h1,
     .admin-panel.admin-light h2,
     .admin-panel.admin-light .text-white,
     .admin-panel.admin-light .text-slate-100 {
-        color: #10202c !important;
+        color: #111827 !important;
     }
 
     .admin-panel.admin-light .text-slate-300,
     .admin-panel.admin-light .text-slate-400 {
-        color: #607287 !important;
+        color: #667085 !important;
     }
 
     .admin-panel.admin-light .border-white\/10,
     .admin-panel.admin-light .border-white\/15,
     .admin-panel.admin-light .border-white\/25 {
-        border-color: #d7e2ec !important;
+        border-color: #dfe3e8 !important;
     }
 
     .admin-panel.admin-light .bg-white\/10,
@@ -196,47 +230,58 @@
     }
 
     .admin-panel.admin-light .hover\:bg-white\/10:hover {
-        background-color: #edf4f8 !important;
+        background-color: #f3f4f6 !important;
     }
 
     .admin-panel.admin-light [dusk="tallstackui_date_input"],
     .admin-panel.admin-light [dusk="tallstackui_select_open_close"],
     .admin-panel.admin-light input {
-        background-color: #f8fbfd !important;
-        border-color: #c9d8e4 !important;
-        color: #10202c !important;
+        background-color: #fbfcfe !important;
+        border-color: #d8dee6 !important;
+        color: #111827 !important;
+        box-shadow: 0 1px 2px rgb(17 24 39 / 0.04) !important;
     }
 
     .admin-panel.admin-light input::placeholder {
-        color: #7a8da0 !important;
+        color: #98a2b3 !important;
+    }
+
+    .admin-panel.admin-light [dusk="tallstackui_date_input"]:focus,
+    .admin-panel.admin-light [dusk="tallstackui_select_open_close"]:focus,
+    .admin-panel.admin-light input:focus {
+        --tw-ring-color: rgb(20 184 166 / 0.24) !important;
+        border-color: #14b8a6 !important;
+        box-shadow:
+            0 0 0 3px rgb(20 184 166 / 0.14),
+            0 1px 2px rgb(17 24 39 / 0.04) !important;
     }
 
     .admin-panel.admin-light input:-webkit-autofill,
     .admin-panel.admin-light input:-webkit-autofill:hover,
     .admin-panel.admin-light input:-webkit-autofill:focus,
     .admin-panel.admin-light input:-webkit-autofill:active {
-        -webkit-text-fill-color: #10202c !important;
-        caret-color: #10202c !important;
-        background-color: #f8fbfd !important;
+        -webkit-text-fill-color: #111827 !important;
+        caret-color: #111827 !important;
+        background-color: #fbfcfe !important;
         background-image: none !important;
         border-color: transparent !important;
         -webkit-box-shadow:
-            inset 0 0 0 1000px #f8fbfd,
-            inset 0 0 0 1px #c9d8e4 !important;
+            inset 0 0 0 1000px #fbfcfe,
+            inset 0 0 0 1px #d8dee6 !important;
         box-shadow:
-            inset 0 0 0 1000px #f8fbfd,
-            inset 0 0 0 1px #c9d8e4 !important;
+            inset 0 0 0 1000px #fbfcfe,
+            inset 0 0 0 1px #d8dee6 !important;
         transition: background-color 9999s ease-out 0s;
     }
 
     .admin-panel.admin-light [dusk="tallstackui_select_open_close"] span {
-        color: #10202c !important;
+        color: #111827 !important;
     }
 
     .admin-panel.admin-light [dusk="tallstackui_select_open_close"] svg,
     .admin-panel.admin-light [dusk="tallstackui_date_input"] svg,
     .admin-panel.admin-light input + svg {
-        color: #607287 !important;
+        color: #667085 !important;
     }
 
     .admin-panel.admin-light .focus\:ring-offset-\[\#101820\]:focus,
@@ -244,43 +289,73 @@
         --tw-ring-offset-color: #ffffff !important;
     }
 
+    .admin-panel.admin-light .admin-theme-sun {
+        color: #d97706 !important;
+    }
+
+    .admin-panel.admin-light .admin-theme-switch {
+        background-color: #eef2f6 !important;
+        border-color: #d7dde5 !important;
+    }
+
+    .admin-panel.admin-light .admin-logout-button {
+        background-color: #fff1f2 !important;
+        border-color: #fda4af !important;
+        color: #be123c !important;
+    }
+
+    .admin-panel.admin-light .admin-logout-button:hover {
+        background-color: #ffe4e6 !important;
+        border-color: #fb7185 !important;
+        color: #9f1239 !important;
+    }
+
+    .admin-panel.admin-light .admin-logout-icon {
+        color: #e11d48 !important;
+    }
+
+    .admin-panel.admin-light button.text-white,
+    .admin-panel.admin-light [role="button"].text-white {
+        color: #ffffff !important;
+    }
+
     body.admin-light-theme [data-floating] {
         background-color: #ffffff !important;
-        border-color: #d7e2ec !important;
-        color: #10202c !important;
-        box-shadow: 0 24px 70px rgb(15 34 48 / 0.18) !important;
+        border-color: #dfe3e8 !important;
+        color: #111827 !important;
+        box-shadow: 0 20px 48px rgb(17 24 39 / 0.12) !important;
     }
 
     body.admin-light-theme [data-floating] input {
-        background-color: #f8fbfd !important;
-        border-color: #c9d8e4 !important;
-        color: #10202c !important;
+        background-color: #fbfcfe !important;
+        border-color: #d8dee6 !important;
+        color: #111827 !important;
     }
 
     body.admin-light-theme [data-floating] input::placeholder {
-        color: #7a8da0 !important;
+        color: #98a2b3 !important;
     }
 
     body.admin-light-theme [data-floating] button,
     body.admin-light-theme [data-floating] li,
     body.admin-light-theme [data-floating] span {
-        color: #10202c;
+        color: #111827;
     }
 
     body.admin-light-theme [data-floating] svg {
-        color: #607287 !important;
+        color: #667085 !important;
     }
 
     body.admin-light-theme [data-floating] li:hover,
     body.admin-light-theme [data-floating] li:focus,
     body.admin-light-theme [data-floating] li.font-semibold,
     body.admin-light-theme [data-floating] li[aria-selected="true"] {
-        background-color: rgb(46 196 182 / 0.16) !important;
+        background-color: rgb(20 184 166 / 0.10) !important;
     }
 
     body.admin-light-theme [data-floating] li.font-semibold,
     body.admin-light-theme [data-floating] li[aria-selected="true"] {
-        color: #137d77 !important;
+        color: #0f766e !important;
     }
 
     body.admin-light-theme [data-floating]:has([dusk="tallstackui_select_options"]) [dusk="tallstackui_select_options"] {
