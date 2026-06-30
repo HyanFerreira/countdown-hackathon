@@ -82,7 +82,7 @@
             </p>
         </section>
 
-        <footer class="mx-auto grid w-full max-w-3xl gap-2 text-xs text-[#F8FAFC]/80 sm:grid-cols-2">
+        <footer class="mx-auto grid w-full max-w-5xl gap-2 text-xs text-[#F8FAFC]/80 sm:grid-cols-3">
             <div class="rounded-md border border-white/10 bg-white/[0.06] px-3 py-2">
                 <span class="block font-semibold text-[#F4E3C1]">Início</span>
                 <span id="start-label">--</span>
@@ -91,6 +91,15 @@
                 <span class="block font-semibold text-[#F4E3C1]">Término</span>
                 <span id="end-label">--</span>
             </div>
+            <a
+                href="https://adsconecta.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-md border border-[#2EC4B6]/30 bg-[#2EC4B6]/10 px-3 py-2 transition hover:border-[#2EC4B6]/60 hover:bg-[#2EC4B6]/15"
+            >
+                <span class="block font-semibold text-[#2EC4B6]">ADS Conecta</span>
+                <span>Rede social da comunidade de ADS do IFSP Caraguá para networking.</span>
+            </a>
         </footer>
     </main>
 
